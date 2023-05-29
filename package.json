@@ -1,0 +1,22 @@
+{
+    "name": "airport-arrs-deps",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+},
+"dependencies": {
+        "vue": "^3.2.47"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^4.1.0",
+        "eslint": "^8.41.0",
+        "eslint-plugin-vue": "^9.14.1",
+        "stylelint": "^15.6.2",
+        "stylelint-config-standard": "^33.0.0",
+        "vite": "^4.3.2"
+    }
+}
