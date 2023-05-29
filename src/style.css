@@ -1,0 +1,230 @@
+body {
+    margin-top: 0;
+}
+
+#container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start; /* main axis */
+    align-items: flex-start; /* cross axis */
+}
+
+header {
+    width: 90%;
+    margin: 0;
+    padding: 0 5%;
+    background: #f2f2f2;  /* light grey */
+    flex: initial; /* flex: 0 1 auto */
+    position: relative;
+    text-align: center;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2000px;
+    left: 100%;
+    background: #f2f2f2;  /* light grey */
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2000px;
+    right: 100%;
+    background: #f2f2f2;  /* light grey */
+}
+
+nav {
+    width: 90%;
+    margin: 1em 0;
+    padding: 0.5em 5%;
+    flex: initial; /* flex: 0 1 auto */
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around; /* main axis */
+    align-items: center; /* cross axis */
+}
+
+nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2000px;
+    left: 100%;
+}
+
+nav::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2000px;
+    right: 100%;
+}
+
+button {
+    width: 120px;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background: #09A603; /* almost black */
+    background: #0511F2;
+    border: none;
+    border-radius: 15px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 2.5;
+    font-weight: 600;
+}
+
+@media (width >= 300px) {
+    button {
+        font-size: 0.875em; /* 14px */
+    }
+}
+
+@media (width >= 400px) {
+    button {
+        font-size: 0.9375em; /* 15px */
+    }
+}
+
+@media (width >= 500px) {
+    button {
+        font-size: 1em; /* 16px */
+    }
+}
+
+@media (width >= 600px) {
+    button {
+        font-size: 1.0625em; /* 17px */
+    }
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex: initial; /* flex: 0 1 auto */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start; /* main axis */
+    align-items: flex-start; /* cross axis */
+}
+
+.page-title {
+    width: 90%;
+    margin: 1em 0;
+    padding: 0.5em 5%;
+    background: #f2f2f2;  /* light grey */
+    flex: initial; /* flex: 0 1 auto */
+}
+
+section {
+    width: 90%;
+    margin: 1em 0;
+    padding: 0.5em 5%;
+    background: #f2f2f2;  /* light grey */
+    flex: initial; /* flex: 0 1 auto */
+}
+
+/* Fonts */
+p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #0511f2; /* bright purple */
+}
+
+h2 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #0511f2; /* bright purple */
+}
+.lite-txt {
+    color: #fff;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.emphasis {
+    color: #122459; /* dark blue */
+    font-weight: 500;
+}
+
+@media (width >= 300px) {
+    p {
+        font-size: 0.875em; /* 14px */
+    }
+
+    h1 {
+        font-size: 1em; /* 16px */
+    }
+
+    h2 {
+        font-size: 0.9375em; /* 15px */
+    }
+}
+
+@media (width >= 400px) {
+    p {
+        font-size: 0.9375em; /* 15px */
+    }
+
+    h1 {
+        font-size: 1.0625em; /* 17px */
+    }
+
+    h2 {
+        font-size: 1em; /* 16px */
+    }
+}
+
+@media (width >= 500px) {
+    p {
+        font-size: 1em; /* 16px */
+    }
+
+    h1 {
+        font-size: 1.125em; /* 18px */
+    }
+
+    h2 {
+        font-size: 1.0625em; /* 17px */
+    }
+}
+
+@media (width >= 600px) {
+    p {
+        font-size: 1.0625em; /* 17px */
+    }
+
+    h1 {
+        font-size: 1.1875em; /* 19px */
+    }
+
+    h2 {
+        font-size: 1.125em; /* 18px */
+    }
+}
