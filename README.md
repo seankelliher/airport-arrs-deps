@@ -1,4 +1,4 @@
-[![MIT License on GitHub](https://img.shields.io/github/license/seankelliher/airport-arrs-depsstyle=flat-square)](/LICENSE.txt)
+[![MIT License on GitHub](https://img.shields.io/github/license/seankelliher/airport-arrs-deps?style=flat-square)](/LICENSE.txt)
 ## Airport Arrivals & Departures
 
 Current arrivals and departures at local airport, built with Vue.
