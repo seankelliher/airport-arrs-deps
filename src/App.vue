@@ -21,7 +21,7 @@ const tabs = {
             <button
                 v-for="(_, tab) in tabs"
                 :key="tab"
-                :class="{ active: currentTab === tab }"
+                :class="['mid-green', { active: currentTab === tab }]"
                 @click="currentTab = tab"
              >
                 {{ tab }}
