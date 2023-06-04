@@ -141,7 +141,8 @@ section {
     align-items: flex-start; /* cross axis */
 }
 
-.origin {
+.origin,
+.destination {
     width: 15%;
     text-align: center;
 }
