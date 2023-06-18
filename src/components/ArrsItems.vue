@@ -15,8 +15,8 @@ const { arrivals, error } = useFetch();
         <div class="flight pale-blue"><p>{{ arrival.callSign }}</p></div>
         <div class="airline pale-blue"><p>{{ arrival.airline.name }}</p></div>
         <div class="status pale-blue"><p>{{ arrival.status }}</p></div>
-        <div class="time-sch pale-blue"><p>{{ arrival.movement.scheduledTime.local.substring(11, 16) }}</p></div>
-        <div class="time-act pale-blue"><p>{{ arrival.movement.revisedTime.local.substring(11, 16) }}</p></div>
+        <div class="time-sch pale-blue"><p>{{ `${arrival.movement.scheduledTimeLocal}`.substring(11, 16) }}</p></div>
+        <div class="time-act pale-blue"><p>{{ `${arrival.movement.actualTimeLocal}`.substring(11, 16) }}</p></div>
     </section>
 
 </template>
