@@ -1,61 +1,22 @@
 <script setup>
-import { ref } from "vue";
+import { useFetch } from "../composables/fetch.js";
 
-const items = ref([
-    {
-        id: 1,
-        class: ["origin", "pale-blue"],
-        origin: "Singpore",
-        flight: "SA2763",
-        airline: "Singapore Airlines",
-        status: "on-time",
-        time: "11:44AM",
-        gate: "T5 - 41"
-    },
-    {
-        id: 2,
-        class: ["origin", "pale-blue"],
-        origin: "Berlin",
-        flight: "LU3765",
-        airline: "Lufthansa Airlines",
-        status: "on-time",
-        time: "11:52AM",
-        gate: "T2 - 32"
-    },
-    {
-        id: 3,
-        class: ["origin", "pale-blue"],
-        origin: "Dallas",
-        flight: "DL6752",
-        airline: "Delta Airlines",
-        status: "on-time",
-        time: "11:58AM",
-        gate: "T1 - 5"
-    },
-    {
-        id: 4,
-        class: ["origin", "pale-blue"],
-        origin: "Toronto",
-        flight: "CA7863",
-        airline: "Air Canada",
-        status: "delayed",
-        time: "12:11PM",
-        gate: "T3 - 15"
-    }
-]);
+const { arrivals, error } = useFetch();
 
 </script>
 
 <template>
+
     <section
-        v-for="item in items"
-        :key="item.id"
+        v-for="arrival in arrivals"
+        :key="arrival.number"
     >
-        <div class="origin pale-blue"><p>{{ item.origin }}</p></div>
-        <div class="flight pale-blue"><p>{{ item.flight }}</p></div>
-        <div class="airline pale-blue"><p>{{ item.airline }}</p></div>
-        <div class="status pale-blue"><p>{{ item.status }}</p></div>
-        <div class="time pale-blue"><p>{{ item.time }}</p></div>
-        <div class="gate pale-blue"><p>{{ item.gate }}</p></div>
+        <div class="origin pale-blue"><p>{{ arrival.movement.airport.name }}</p></div>
+        <div class="flight pale-blue"><p>{{ arrival.callSign }}</p></div>
+        <div class="airline pale-blue"><p>{{ arrival.airline.name }}</p></div>
+        <div class="status pale-blue"><p>{{ arrival.status }}</p></div>
+        <div class="time-sch pale-blue"><p>{{ arrival.movement.scheduledTime.local.substring(11, 16) }}</p></div>
+        <div class="time-act pale-blue"><p>{{ arrival.movement.revisedTime.local.substring(11, 16) }}</p></div>
     </section>
+
 </template>

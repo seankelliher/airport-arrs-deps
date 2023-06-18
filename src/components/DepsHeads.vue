@@ -6,8 +6,8 @@ const headings = ref([
     { id: 2, class: ["flight", "warm-blue"], title: "Flight" },
     { id: 3, class: ["airline", "warm-blue"], title: "Airline" },
     { id: 4, class: ["status", "warm-blue"], title: "Status" },
-    { id: 5, class: ["time", "warm-blue"], title: "Time" },
-    { id: 6, class: ["gate", "warm-blue"], title: "Gate" }
+    { id: 5, class: ["time-sch", "warm-blue"], title: "Sched" },
+    { id: 6, class: ["time-act", "warm-blue"], title: "Actual" }
 ]);
 </script>
 
