@@ -6,24 +6,13 @@ export function useFetch() {
     const departures = ref(null);
     const error = ref(null);
 
-    const airport = "KIAD"; //Dulles Airport, ICAO code.
-    const url = "ADD-URL-HERE";
-
-    const options = {
-        method: "GET",
-        headers: {
-            "X-RapidAPI-Key": "ADD-KEY-HERE",
-            "X-RapidAPI-Host": "ADD-HOST-HERE"
-        }
-    };
-
-    fetch(url, options)
+    fetch("http://localhost:4040/arrivals-departures")
         .then((response) => {
             return response.json();
         })
         .then((data) => {
-            arrivals.value = data.arrivals;
-            departures.value = data.departures;
+            arrivals.value = data.flights.arrivals;
+            departures.value = data.flights.departures;
         })
         .catch((err) => (error.value = err));
 
