@@ -1,14 +1,20 @@
 {
     "name": "airport-arrs-deps",
     "private": true,
-    "version": "0.0.0",
-    "type": "module",
+    "version": "1.0.0",
+    "type": "commonjs",
+    "description": "Arrivals and departures at local airport",
     "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-},
-"dependencies": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js",
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "author": "Sean Kelliher",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.18.2",
         "vue": "^3.2.47"
     },
     "devDependencies": {
@@ -18,5 +24,9 @@
         "stylelint": "^15.6.2",
         "stylelint-config-standard": "^33.0.0",
         "vite": "^4.3.2"
+    },
+    "engines": {
+        "node": "19.3.0",
+        "npm": "9.2.0"
     }
 }
