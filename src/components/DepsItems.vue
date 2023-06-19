@@ -2,21 +2,68 @@
 import { useFetch } from "../composables/fetch.js";
 
 const { departures, error } = useFetch();
+console.log(departures);
 
 </script>
 
 <template>
 
-    <section
+    <template
         v-for="departure in departures"
         :key="departure.number"
     >
-        <div class="origin pale-blue"><p>{{ departure.movement.airport.name }}</p></div>
-        <div class="flight pale-blue"><p>{{ departure.callSign }}</p></div>
-        <div class="airline pale-blue"><p>{{ departure.airline.name }}</p></div>
-        <div class="status pale-blue"><p>{{ departure.status }}</p></div>
-        <div class="time-sch pale-blue"><p>{{ `${departure.movement.scheduledTimeLocal}`.substring(11, 16) }}</p></div>
-        <div class="time-act pale-blue"><p>{{ `${departure.movement.actualTimeLocal}`.substring(11, 16) }}</p></div>
-    </section>
+
+        <section v-if="departure.airline.name !== 'Unknown/Private owner'">
+            <div class="origin pale-blue">
+                <p v-if="departure.movement.airport.name !== NULL">
+                    {{ departure.movement.airport.name }}
+                </p>
+                <p v-else>
+                    n/a
+                </p>
+            </div>
+            <div class="flight pale-blue">
+                <p v-if="departure.callSign !== NULL">
+                    {{ departure.callSign }}
+                </p>
+                <p v-else>
+                    n/a
+                </p>
+            </div>
+            <div class="airline pale-blue">
+                <p v-if="departure.airline.name !== NULL">
+                    {{ departure.airline.name }}
+                </p>
+                <p v-else>
+                    n/a
+                </p>
+            </div>
+            <div class="status pale-blue">
+                <p v-if="departure.status !== NULL">
+                    {{ departure.status }}
+                </p>
+                <p v-else>
+                    n/a
+                </p>
+            </div>
+            <div class="time-sch pale-blue">
+                <p v-if="departure.movement.scheduledTimeLocal !== NULL">
+                    {{ `${departure.movement.scheduledTimeLocal}`.substring(11, 16) }}
+                </p>
+                <p v-else>
+                    n/a
+                </p>
+            </div>
+            <div class="time-act pale-blue">
+                <p v-if="departure.movement.actualTimeLocal !== NULL">
+                    {{ `${departure.movement.actualTimeLocal}`.substring(11, 16) }}
+                </p>
+                <p v-else>
+                    n/a
+                </p>
+            </div>
+        </section>
+
+    </template>
 
 </template>
