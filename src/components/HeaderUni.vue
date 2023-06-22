@@ -9,6 +9,8 @@ defineProps({
 
 <template>
     <header>
-        <h1>{{ pageName }}</h1>
+        <h1 class="dark-blue-color">
+            {{ pageName }}
+        </h1>
     </header>
 </template>

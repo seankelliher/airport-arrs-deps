@@ -26,7 +26,7 @@ defineOptions({
             <button
                 v-for="(_, tab) in tabs"
                 :key="tab"
-                :class="['mid-green', { active: currentTab === tab }]"
+                :class="['dark-blue-color', 'dark-blue-border', { active: currentTab === tab }]"
                 @click="currentTab = tab"
              >
                 {{ tab }}
