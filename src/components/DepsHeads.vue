@@ -12,12 +12,12 @@ const headings = ref([
 </script>
 
 <template>
-    <section class="lite-green-bg">
+    <section class="lite-blue-bg">
         <div
             v-for="heading in headings"
             :key="heading.id"
             :class="heading.class">
-            <p class="dark-green-color">
+            <p class="dark-blue-color">
                 {{ heading.title }}
             </p>
         </div>
