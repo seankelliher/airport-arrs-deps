@@ -60,7 +60,7 @@ nav {
 }
 
 button {
-    margin-right: 20px;
+    margin: 0;
     padding: 0;
     background: transparent;
     border: none;
@@ -105,6 +105,7 @@ button:hover {
 
 main {
     width: 100%;
+    min-width: 540px;
     margin: 0;
     padding: 0;
     flex: initial; /* flex: 0 1 auto */
@@ -142,32 +143,38 @@ section:first-of-type {
     width: 20%;
     padding-left: 2%;
     text-align: left;
+    /* background: yellow; */
 }
 
 .flight {
-    width: 18%;
+    width: 15%;
     text-align: left;
+    /* background: lightcoral; */
 }
 
 .airline {
-    width: 20%;
+    width: 23%;
     text-align: left;
+    /* background: lightblue; */
 }
 
 .status {
     width: 13%;
     text-align: left;
+    /* background: pink; */
 }
 
 .time-sch {
     width: 10%;
     text-align: left;
+    /* background: yellow; */
 }
 
 .time-act {
     width: 10%;
     padding-right: 2%;
     text-align: right;
+    /* background: lightseagreen; */
 }
 
 /* Fonts */
@@ -200,6 +207,10 @@ h2 {
 /* Used in column headers */
 .lite-blue-bg {
     background: #e1f5fe;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 6px 6px 3px #fff;
+    /* offset-x, offset-y, blur-radius, spread-radius, color */
 }
 
 /* Used in buttons, column headers */
@@ -209,7 +220,7 @@ h2 {
 
 @media (width >= 300px) {
     p {
-        font-size: 0.875em; /* 14px */
+        font-size: 0.75em; /* 12px */
     }
 
     h1 {
@@ -217,13 +228,13 @@ h2 {
     }
 
     h2 {
-        font-size: 0.8125; /* 13px */
+        font-size: 0.8125em; /* 13px */
     }
 }
 
 @media (width >= 400px) {
     p {
-        font-size: 0.9375em; /* 15px */
+        font-size: 0.8125em; /* 13px */
     }
 
     h1 {
@@ -237,7 +248,7 @@ h2 {
 
 @media (width >= 500px) {
     p {
-        font-size: 1em; /* 16px */
+         font-size: 0.875em; /* 14px */
     }
 
     h1 {
@@ -251,7 +262,7 @@ h2 {
 
 @media (width >= 600px) {
     p {
-        font-size: 1.0625em; /* 17px */
+        font-size: 0.9375em; /* 15px */
     }
 
     h1 {
