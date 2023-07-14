@@ -13,7 +13,7 @@ const { arrivals, error } = useFetch();
     >
 
         <section v-if="arrival.airline.name !== 'Unknown/Private owner'">
-            <div class="origin pale-blue">
+            <div class="origin">
                 <p v-if="arrival.movement.airport.name !== NULL">
                     {{ arrival.movement.airport.name }}
                 </p>
@@ -21,7 +21,7 @@ const { arrivals, error } = useFetch();
                     n/a
                 </p>
             </div>
-            <div class="flight pale-blue">
+            <div class="flight">
                 <p v-if="arrival.callSign !== NULL">
                     {{ arrival.callSign }}
                 </p>
@@ -29,7 +29,7 @@ const { arrivals, error } = useFetch();
                     n/a
                 </p>
             </div>
-            <div class="airline pale-blue">
+            <div class="airline">
                 <p v-if="arrival.airline.name !== NULL">
                     {{ arrival.airline.name }}
                 </p>
@@ -37,7 +37,7 @@ const { arrivals, error } = useFetch();
                     n/a
                 </p>
             </div>
-            <div class="status pale-blue">
+            <div class="status">
                 <p v-if="arrival.status !== NULL">
                     {{ arrival.status }}
                 </p>
@@ -45,7 +45,7 @@ const { arrivals, error } = useFetch();
                     n/a
                 </p>
             </div>
-            <div class="time-sch pale-blue">
+            <div class="time-sch">
                 <p v-if="arrival.movement.scheduledTimeLocal !== NULL">
                     {{ `${arrival.movement.scheduledTimeLocal}`.substring(11, 16) }}
                 </p>
@@ -53,7 +53,7 @@ const { arrivals, error } = useFetch();
                     n/a
                 </p>
             </div>
-            <div class="time-act pale-blue">
+            <div class="time-act">
                 <p v-if="arrival.movement.actualTimeLocal !== NULL">
                     {{ `${arrival.movement.actualTimeLocal}`.substring(11, 16) }}
                 </p>

@@ -14,7 +14,7 @@ console.log(departures);
     >
 
         <section v-if="departure.airline.name !== 'Unknown/Private owner'">
-            <div class="origin pale-blue">
+            <div class="origin">
                 <p v-if="departure.movement.airport.name !== NULL">
                     {{ departure.movement.airport.name }}
                 </p>
@@ -22,7 +22,7 @@ console.log(departures);
                     n/a
                 </p>
             </div>
-            <div class="flight pale-blue">
+            <div class="flight">
                 <p v-if="departure.callSign !== NULL">
                     {{ departure.callSign }}
                 </p>
@@ -30,7 +30,7 @@ console.log(departures);
                     n/a
                 </p>
             </div>
-            <div class="airline pale-blue">
+            <div class="airline">
                 <p v-if="departure.airline.name !== NULL">
                     {{ departure.airline.name }}
                 </p>
@@ -38,7 +38,7 @@ console.log(departures);
                     n/a
                 </p>
             </div>
-            <div class="status pale-blue">
+            <div class="status">
                 <p v-if="departure.status !== NULL">
                     {{ departure.status }}
                 </p>
@@ -46,7 +46,7 @@ console.log(departures);
                     n/a
                 </p>
             </div>
-            <div class="time-sch pale-blue">
+            <div class="time-sch">
                 <p v-if="departure.movement.scheduledTimeLocal !== NULL">
                     {{ `${departure.movement.scheduledTimeLocal}`.substring(11, 16) }}
                 </p>
@@ -54,7 +54,7 @@ console.log(departures);
                     n/a
                 </p>
             </div>
-            <div class="time-act pale-blue">
+            <div class="time-act">
                 <p v-if="departure.movement.actualTimeLocal !== NULL">
                     {{ `${departure.movement.actualTimeLocal}`.substring(11, 16) }}
                 </p>
